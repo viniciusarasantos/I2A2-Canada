@@ -1,0 +1,8 @@
+prefix=/home/viniciusarasantos/workspace/devel
+
+Name: turtlebot3_slam
+Description: Description of turtlebot3_slam
+Version: 1.2.1
+Cflags: -I/home/viniciusarasantos/workspace/src/turtlebot3/turtlebot3_slam/include
+Libs: -L/home/viniciusarasantos/workspace/devel/lib 
+Requires: roscpp sensor_msgs

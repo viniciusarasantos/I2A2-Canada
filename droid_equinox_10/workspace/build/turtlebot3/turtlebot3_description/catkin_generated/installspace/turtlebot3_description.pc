@@ -1,0 +1,8 @@
+prefix=/home/viniciusarasantos/workspace/install
+
+Name: turtlebot3_description
+Description: Description of turtlebot3_description
+Version: 1.2.1
+Cflags: 
+Libs: -L/home/viniciusarasantos/workspace/install/lib 
+Requires: urdf xacro
