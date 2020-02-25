@@ -40,20 +40,50 @@ In case of problems with the next step, you can use following repositories inste
 
 *Option 1* | **Desktop-Full Install (Recommended)** : ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators and 2D/3D perception
 
-`$ sudo apt install ros-melodic-desktop`
+`$ sudo apt install ros-melodic-desktop-full`
 
 *Option 2* | **Desktop Install** : ROS, rqt, rviz, and robot-generic libraries.
 
-`$ sudo apt install ros-melodic-desktop-full`
+`$ sudo apt install ros-melodic-desktop`
 
-*Option 3* | **Desktop-Full Install (Recommended)** : ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators and 2D/3D perception
+*Option 3* | **ROS-Base (Bare Bones)** : ROS package, build, and communication libraries. No GUI tools.
 
-`$ sudo apt install ros-melodic-desktop-full`
+`$ sudo apt install ros-melodic-ros-base`
 
-*Option 4* | **Desktop-Full Install (Recommended)** : ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators and 2D/3D perception
+*Option 4* | **Individual Package** : You can also install a specific ROS package (replace underscores with dashes of the package name):
 
-`$ sudo apt install ros-melodic-desktop-full`
+e.g.
 
+`$ sudo apt install ros-melodic-slam-gmapping`
+
+To find available packages, use:
+
+`$ apt search ros-melodic`
+
+### Initialize rosdep
+
+Before you can use ROS, you will need to initialize rosdep. rosdep enables you to easily install system dependencies for source you want to compile and is required to run some core components in ROS.
+
+ `$ sudo rosdep init` 
+ `$ rosdep update`
+
+### Environment setup
+
+*Option 1 * | It's convenient if the **ROS environment variables are automatically added to your bash session** every time a new shell is launched:
+
+`$ echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc`
+`$ source ~/.bashrc`
+
+*If you have more than one ROS distribution installed, ~/.bashrc must only source the setup.bash for the version you are currently using.*
+
+*Option 2 * | If you **just want to change the environment of your current shel**l, instead of the above you can type:
+
+`$ source /opt/ros/melodic/setup.bash`
+
+*Option 3 * | ** If you use zsh instead of bash** you need to run the following commands to set up your shell:
+
+`$ echo "source /opt/ros/melodic/setup.zsh" >> ~/.zshrc`
+`$ source ~/.zshrc`
 
 **Table of Contents**
 
